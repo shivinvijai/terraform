@@ -7,11 +7,12 @@ How to run this scripts
 
 To run this example you need to execute:
 
-terraform init
-terraform plan
-terraform apply
-terraform destroy
-
+```````
+#terraform init
+#terraform plan
+#terraform apply
+#terraform destroy
+``````
 Note: Here I am not using any variable replacements.
 
 
