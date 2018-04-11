@@ -1,6 +1,6 @@
 # Define AWS as our provider
 provider "aws" {
-  region = "$${Region}"
+  region = $"${Region}"
 }
 # Define our VPC
 resource "aws_vpc" "default" {
