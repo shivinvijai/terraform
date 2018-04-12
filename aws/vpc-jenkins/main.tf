@@ -1,17 +1,15 @@
 # Define AWS as our provider
 provider "aws" {
-  region = "$Region"
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
+  region = "${var.region}"
   
 }
 # Define our VPC
 resource "aws_vpc" "default" {
-  cidr_block = "$${CIDR}"
+  cidr_block = "${var.cidr_block}"
   enable_dns_hostnames = true
- 
- vars {
-	CIDR = "$CIDR"
- }
- 
+
   tags {
     Name = "terraform-vpc"
   }
