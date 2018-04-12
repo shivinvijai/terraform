@@ -5,10 +5,15 @@ provider "aws" {
 }
 # Define our VPC
 resource "aws_vpc" "default" {
-  cidr_block = "${var.CIDR}"
+  cidr_block = "$${CIDR}"
   enable_dns_hostnames = true
+ 
+ vars {
+	CIDR = "$CIDR"
+ }
  
   tags {
     Name = "terraform-vpc"
   }
 }
+
