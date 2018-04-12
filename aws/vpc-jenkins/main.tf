@@ -5,7 +5,7 @@ provider "aws" {
 }
 # Define our VPC
 resource "aws_vpc" "default" {
-  cidr_block = "${$CIDR}"
+  cidr_block = "${var.CIDR}"
   enable_dns_hostnames = true
  
   tags {
